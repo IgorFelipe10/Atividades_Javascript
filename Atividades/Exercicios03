@@ -1,0 +1,63 @@
+/*1-A previsão do tempo para hoje é de 293 Kelvin. Para começar, crie uma variável
+chamada "kelvin" e atribua a ela o valor 293. O valor armazenado na variável
+"kelvin" permanecerá constante. Escolha o tipo de variável que é mais adequado
+para manter esse valor constante. */
+
+let kelvin = 293
+console.log(kelvin)
+
+/*2-Celsius é similar a Kelvin — a única diferença é que Celsius é 273 graus menor
+que Kelvin. Vamos converter Kelvin para Celsius subtraindo 273 da variável
+"kelvin". Armazene o resultado em outra variável, chamada "celsius". */
+
+let celsius = kelvin - 273
+console.log(celsius)
+
+/*3-Use a seguinte fórmula para calcular Fahrenheit, e então armazene o resultado
+em uma variável chamada "fahrenheit". A fórmula é: Fahrenheit = Celsius * (9/5)
++ 32. No próximo passo, iremos arredondar o número salvo na variável
+"fahrenheit". Escolha o tipo de variável que permite que você altere seu valor. */
+
+let fahrenheit = celsius * (9/5) + 32
+console.log(fahrenheit)
+
+/*4-Quando você converte de Celsius para Fahrenheit, geralmente obtém um
+número decimal. Use o método .floor() do objeto Math para arredondar para
+baixo a temperatura em Fahrenheit. Salve o resultado na variável "fahrenheit". */
+
+ fahrenheit = Math.floor(fahrenheit)
+ console.log(fahrenheit)
+
+/*5-Use console.log e interpolação de string para registrar no console a
+temperatura em Fahrenheit da seguinte forma: "A temperatura é TEMPERATURA
+graus Fahrenheit". Use a interpolação de string para substituir "TEMPERATURA"
+pelo valor armazenado na variável "fahrenheit". */
+
+let temperatura = fahrenheit
+console.log(`A temperatura é ${temperatura} graus fahrenheit`)
+
+/*6-Ao usar variáveis, seu programa deve funcionar para qualquer temperatura
+em Kelvin — basta alterar o valor de "kelvin" e executar o programa novamente.
+Qual seria a temperatura correspondente a 0 Kelvin em Fahrenheit? */
+
+function exercicio11 (kelvin) {
+    fahrenheit =  (kelvin - 273.15) * 9/5 + 32
+    return fahrenheit 
+}
+
+kelvin = 0
+fahrenheit = exercicio11(kelvin)
+
+console.log(`A temperatura de 0 Kelvin é igual a ${fahrenheit} Fahrenheit.`);
+ 
+
+/*7-Ótimo trabalho! Agora Kelvin pode publicar suas previsões tanto em Celsius
+quanto em Fahrenheit. Se você quiser praticar um pouco mais, tente fazer o
+seguinte: Converta Celsius para a escala Newton usando a equação abaixo:
+Newton = Celsius * (33/100). Arredonde a temperatura em Newton para baixo
+usando o método .floor(). Use console.log e interpolação de string para registrar
+no console a temperatura em Newton. */
+
+let newton = celsius * (33/100)
+newton = Math.floor(newton)
+console.log(`A temperatura em newton é ${newton}`)
